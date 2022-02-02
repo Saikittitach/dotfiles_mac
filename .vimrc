@@ -3,8 +3,8 @@
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 call plug#begin('~/.vim/plugged')
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
-Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
-Plug 'junegunn/fzf.vim'
+"Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
+"Plug 'junegunn/fzf.vim'
 Plug 'cormacrelf/vim-colors-github'
 Plug 'mbbill/undotree'
 Plug 'preservim/nerdtree'
@@ -25,6 +25,8 @@ Plug 'doums/darcula'
 Plug 'gmoe/vim-eslint-syntax'
 Plug 'flrnprz/plastic.vim'
 Plug 'joshdick/onedark.vim'
+
+Plug 'voldikss/vim-floaterm'
 
 "Format PHP
 Plug 'yaegassy/coc-intelephense', {'do': 'yarn install --frozen-lockfile'}
@@ -169,7 +171,7 @@ let g:NERDTreeMinimalUI = 0
 let g:NERDTreeIgnore = ['\.pyc$', '__pycache__', 'node_modules', 'vendor']
 let g:NERDTreeStatusline = ''
 
-" Mirror the NERDTree before showing it. This makes it the same on all tabs.
+"Mirror the NERDTree before showing it. This makes it the same on all tabs.
 nnoremap <C-n> :NERDTreeMirror<CR>:NERDTreeFocus<CR>
 autocmd FileType nerdtree setlocal signcolumn=no
 
@@ -185,23 +187,6 @@ nnoremap <silent> <C-j> :TmuxNavigateDown<cr>
 nnoremap <silent> <C-k> :TmuxNavigateUp<cr>
 nnoremap <silent> <C-l> :TmuxNavigateRight<cr>
 nnoremap <silent> <C-\> :TmuxNavigatePrevious<cr>
-
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" => FZF
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-let g:fzf_buffers_jump = 1
-let g:fzf_tags_command = 'ctags -r'
-let g:fzf_commands_expect = 'alt-enter,ctrl-x'
-
-nnoremap <silent> <Leader>b :Buffers<CR>
-nnoremap <silent> <Leader>f :Files<CR>
-nnoremap <silent> <Leader>r :Rg<CR>
-nnoremap <silent> <Leader>/ :BLines<CR>
-nnoremap <silent> <Leader>' :Marks<CR>
-nnoremap <silent> <Leader>g :Commits<CR>
-nnoremap <silent> <Leader>h :History<CR>
-
-command! -bang -nargs=* Rg call fzf#vim#grep("rg --column -n --no-heading -p --color=always --fixed-strings --follow --smart-case --glob '!{.git,node_modules,vendor}/*' -s ".shellescape(<q-args>), 1, fzf#vim#with_preview(), <bang>0)
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => COC VIM
@@ -319,4 +304,26 @@ set signcolumn=yes
 set tabstop=4
 set shiftwidth=4
 set expandtab
+
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+"" => FloatTerm
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+"hi Floaterm guibg=#414141
+"hi FloatermBorder guibg=#414141 guifg=#f1f1f1
+let g:floaterm_opener = "tabe"
+let g:floaterm_autoclose = 2
+let g:floaterm_width = 0.8
+let g:floaterm_height = 0.6
+let g:floaterm_wintype = "float"
+
+nnoremap <silent> <leader>d :FloatermNew nnn<cr>
+nnoremap <silent> <leader>r :FloatermNew rg -g "!{.git,node_modules,vendor}/*" 2> /dev/null<cr>
+nnoremap <silent> <leader>f :FloatermNew fzf<cr>
+"
+"
+
+
+"let g:prettier#autoformat = 0
+"autocmd BufWritePre *.js,*.jsx,*.mjs,*.ts,*.tsx,*.css,*.less,*.scss,*.json,*.graphql,*.md,*.vue PrettierAsync
+
 

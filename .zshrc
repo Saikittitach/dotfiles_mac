@@ -102,11 +102,11 @@ source $ZSH/oh-my-zsh.sh
 # export LANG=en_US.UTF-8
 
 # Preferred editor for local and remote sessions
-# if [[ -n $SSH_CONNECTION ]]; then
-#   export EDITOR='vim'
-# else
-#   export EDITOR='mvim'
-# fi
+ if [[ -n $SSH_CONNECTION ]]; then
+   export EDITOR='nvim'
+ else
+   export EDITOR='nvim'
+ fi
 
 # Compilation flags
 # export ARCHFLAGS="-arch x86_64"
@@ -134,13 +134,18 @@ alias gac='git add . && git commit -am'
 alias gl='git log'
 alias gb='git branch | fzf | xargs git checkout'
 alias gsl='git shortlog -sn'
-alias gd='git diff -w "$@" | view -'
 
+#cd alias
 alias landing="cd Desktop/bn/bn-sme-landing-ui"
 alias landing-local='cd /Applications/MAMP/htdocs/botnoi/'
 alias bn="cd Desktop/bn/bn-sme-platform-ui-v2"
 alias ecom='cd Desktop/bn/tpi/tpi-ecommerce'
 alias tpi='cd Desktop/bn/tpi/tpi-survey'
+alias 2c2p='cd Desktop/bn/tpi/tpi-2c2p-payment'
+alias fivem='cd Desktop/scotty-crafting/html'
+alias bigc='cd Desktop/bn/bigc'
+alias mdcu='cd Desktop/bn/mdcu/mdcu-liff'
+alias resume='cd sai_resume/my_resume'
 
 # FZF config
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh

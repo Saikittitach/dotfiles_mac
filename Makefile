@@ -1,4 +1,4 @@
-export OSTYPE = $(shell uname)
+hexport OSTYPE = $(shell uname)
 
 config: ## install configuration
 	echo "symlink dotfile config \n"
