@@ -25,8 +25,10 @@ Plug 'doums/darcula'
 Plug 'gmoe/vim-eslint-syntax'
 Plug 'flrnprz/plastic.vim'
 Plug 'joshdick/onedark.vim'
-
 Plug 'voldikss/vim-floaterm'
+
+"JSX format"
+Plug 'maxmellon/vim-jsx-pretty'
 
 "Format PHP
 Plug 'yaegassy/coc-intelephense', {'do': 'yarn install --frozen-lockfile'}
@@ -51,15 +53,10 @@ set nowb
 set nowrap
 set noswapfile
 
-" interface
-"set so=8
-"set relativenumber
-"set signcolumn=yes
-
 " interface 
 set so=8
 set number
-set numberwidth=8
+set numberwidth=4
 set signcolumn=yes
 set tabstop=4
 set shiftwidth=4
@@ -163,7 +160,7 @@ let g:instant_markdown_port = 8888
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 nnoremap <leader>n :NERDTreeFocus<CR>
 nnoremap <C-n> :NERDTree<CR>
-nnoremap <C-t> :NERDTreeToggle<CR
+nnoremap <C-t> :NERDTreeToggle<CR>
 nnoremap <C-f> :NERDTreeFind<CR>
 
 let g:NERDTreeShowHidden=1
@@ -174,6 +171,8 @@ let g:NERDTreeStatusline = ''
 "Mirror the NERDTree before showing it. This makes it the same on all tabs.
 nnoremap <C-n> :NERDTreeMirror<CR>:NERDTreeFocus<CR>
 autocmd FileType nerdtree setlocal signcolumn=no
+"autocmd VimEnter * FloatermNew nnn
+
 
 set backupdir=/tmp//
 set directory=/tmp//
@@ -296,15 +295,6 @@ let g:closetag_shortcut = '>'
 "
 let g:closetag_close_shortcut = '<leader>>'
 
-" interface
-set so=8
-"set number
-set numberwidth=8
-set signcolumn=yes
-set tabstop=4
-set shiftwidth=4
-set expandtab
-
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 "" => FloatTerm
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -322,8 +312,21 @@ nnoremap <silent> <leader>f :FloatermNew fzf<cr>
 "
 "
 
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+"" => Prettier
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
 "let g:prettier#autoformat = 0
 "autocmd BufWritePre *.js,*.jsx,*.mjs,*.ts,*.tsx,*.css,*.less,*.scss,*.json,*.graphql,*.md,*.vue PrettierAsync
 
+" Format by cmd + f
+nnoremap <A-f> :Prettier<CR>
 
+nnoremap <leader>1 1gt<cr>
+nnoremap <leader>2 2gt<cr>
+nnoremap <leader>3 3gt<cr>
+nnoremap <leader>4 4gt<cr>
+nnoremap <leader>5 5gt<cr>
+nnoremap <leader>6 6gt<cr>
+nnoremap <leader>8 8gt<cr>
+nnoremap <leader>9 9gt<cr>

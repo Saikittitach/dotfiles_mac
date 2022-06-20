@@ -102,11 +102,7 @@ source $ZSH/oh-my-zsh.sh
 # export LANG=en_US.UTF-8
 
 # Preferred editor for local and remote sessions
- if [[ -n $SSH_CONNECTION ]]; then
-   export EDITOR='nvim'
- else
-   export EDITOR='nvim'
- fi
+export EDITOR='nvim'
 
 # Compilation flags
 # export ARCHFLAGS="-arch x86_64"
@@ -131,21 +127,29 @@ alias c="clear"
 alias gco='git checkout'
 alias gs='git status'
 alias gac='git add . && git commit -am'
+alias gp='git pull'
 alias gl='git log'
 alias gb='git branch | fzf | xargs git checkout'
+alias gbd='git branch -d'
 alias gsl='git shortlog -sn'
+alias g3="git log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --date=relative"
+
 
 #cd alias
-alias landing="cd Desktop/bn/bn-sme-landing-ui"
+alias landing="cd secrets/bn/bn-sme-landing-ui"
 alias landing-local='cd /Applications/MAMP/htdocs/botnoi/'
-alias bn="cd Desktop/bn/bn-sme-platform-ui-v2"
-alias ecom='cd Desktop/bn/tpi/tpi-ecommerce'
-alias tpi='cd Desktop/bn/tpi/tpi-survey'
-alias 2c2p='cd Desktop/bn/tpi/tpi-2c2p-payment'
-alias fivem='cd Desktop/scotty-crafting/html'
-alias bigc='cd Desktop/bn/bigc'
-alias mdcu='cd Desktop/bn/mdcu/mdcu-liff'
+alias bn="cd secrets/bn/bn-sme-platform-ui-v2"
+alias bnv="cd secrets/bn/bn-sme-platform-ui-v2 && v ."
+alias psu="cd secrets/bn/psu-broadcast-platform"
+alias ecom='cd secrets/bn/tpi/tpi-ecommerce'
+alias tpi='cd secrets/bn/tpi/tpi-survey'
+alias 2c2p='cd secrets/bn/tpi/tpi-2c2p-payment'
+alias bigc='cd bigc-frontend'
+alias bigc-cli='cd secrets/bn/bigc-cli/bigc-frontend'
+alias mdcu='cd secrets/bn/mdcu/mdcu-liff'
 alias resume='cd sai_resume/my_resume'
+alias pretest='cd Desktop/pretest'
+alias rtv='cd secrets/lvt/lvt-ui'
 
 # FZF config
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
