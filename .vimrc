@@ -16,7 +16,8 @@ Plug 'tpope/vim-fugitive'
 Plug 'airblade/vim-gitgutter'
 Plug 'christoomey/vim-tmux-navigator'
 Plug 'mg979/vim-visual-multi'
-Plug 'suan/vim-instant-markdown', {'for': 'markdown'}
+"Plug 'suan/vim-instant-markdown', {'for': 'markdown'}
+Plug 'instant-markdown/vim-instant-markdown', {'for': 'markdown', 'do': 'yarn install'}
 Plug 'prettier/vim-prettier', { 'do': 'yarn install' }
 Plug 'flrnd/candid.vim'
 Plug 'wadackel/vim-dogrun'
@@ -306,8 +307,9 @@ let g:floaterm_width = 0.8
 let g:floaterm_height = 0.6
 let g:floaterm_wintype = "float"
 
-nnoremap <silent> <leader>d :FloatermNew nnn<cr>
-nnoremap <silent> <leader>r :FloatermNew rg -g "!{.git,node_modules,vendor}/*" 2> /dev/null<cr>
+nnoremap <silent> <leader>d :FloatermNew nnn -deH<cr>
+nnoremap <silent> <leader>r :FloatermNew rg --follow -g "!{.git,node_modules,vendor}/*" . 2> /dev/null<cr>
+nnoremap <silent> <leader>g :FloatermNew git log --graph --decorate --oneline<cr>
 nnoremap <silent> <leader>f :FloatermNew fzf<cr>
 "
 "
