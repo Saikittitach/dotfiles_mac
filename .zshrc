@@ -149,7 +149,13 @@ alias bigc-cli='cd secrets/bn/bigc-cli/bigc-frontend'
 alias mdcu='cd secrets/bn/mdcu/mdcu-liff'
 alias resume='cd sai_resume/my_resume'
 alias pretest='cd Desktop/pretest'
-alias rtv='cd secrets/lvt/lvt-ui'
+alias dbot='cd secrets/dbot'
+alias rtv='cd secrets/dbot/lvt'
+alias rtv-ui='cd secrets/dbot/lvt/lvt-ui'
+alias ssh-sp="sudo ssh -F $HOME/.ssh/config -i $HOME/.ssh/id_rsa sprint"
+alias ssh-dev="sudo ssh -F $HOME/.ssh/config -i $HOME/.ssh/id_rsa develop"
+alias ssh-oci-sp="sudo ssh -F $HOME/.ssh/config -i $HOME/.ssh/id_rsa oci-sprint"
+alias ssh-oci-qa="sudo ssh -F $HOME/.ssh/config -i $HOME/.ssh/id_rsa oci-qa"
 
 # FZF config
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
