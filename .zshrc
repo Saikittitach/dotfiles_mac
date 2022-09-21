@@ -117,9 +117,9 @@ export EDITOR='nvim'
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
 # Alias
-alias v="nvim"
-alias vi="nvim"
-alias vim="nvim"
+alias v="nvim ."
+alias vi="nvim ."
+alias vim="nvim ."
 alias c="clear"
 #alias tmux='tmux -2'
 
@@ -149,6 +149,7 @@ alias bigc-cli='cd secrets/bn/bigc-cli/bigc-frontend'
 alias mdcu='cd secrets/bn/mdcu/mdcu-liff'
 alias resume='cd sai_resume/my_resume'
 alias pretest='cd Desktop/pretest'
+alias buddy='cd secrets/buddy/buddy-customer-app'
 alias dbot='cd secrets/dbot'
 alias rtv='cd secrets/dbot/lvt'
 alias rtv-ui='cd secrets/dbot/lvt/lvt-ui'
@@ -177,3 +178,7 @@ export GOCACHE=$HOME/.cache
 export GO111MODULE=on
 #export GOPRIVATE="gitlab.com/botnoi-sme,bitbucket.org/botnoi-sme,github.com/botnoi-sme"
 export PATH=$PATH:$GOPATH/bin
+
+export ANDROID_SDK_ROOT=$HOME/Library/Android/sdk
+export PATH=$PATH:$ANDROID_SDK_ROOT/emulator
+export PATH=$PATH:$ANDROID_SDK_ROOT/platform-tools

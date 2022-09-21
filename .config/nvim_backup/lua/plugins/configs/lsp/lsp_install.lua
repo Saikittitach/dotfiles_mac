@@ -25,8 +25,3 @@ lsp_installer.setup({
   },
   max_concurrent_installers = 10,
 })
-
-
-
-
-

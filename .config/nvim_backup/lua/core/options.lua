@@ -23,9 +23,9 @@ opt.cul = true -- cursor line
 
 -- Indenting
 opt.expandtab = true
-opt.shiftwidth = 2
+opt.shiftwidth = 4
 opt.smartindent = true
-opt.tabstop = 2
+opt.tabstop = 4
 opt.softtabstop = 2
 
 opt.fillchars = { eob = " " }
@@ -35,7 +35,7 @@ opt.mouse = "a"
 
 -- Numbers
 opt.number = true
-opt.numberwidth = 2
+opt.numberwidth = 4
 opt.ruler = false
 
 -- disable nvim intro
@@ -47,6 +47,9 @@ opt.splitright = true
 opt.termguicolors = true
 opt.timeoutlen = 400
 opt.undofile = true
+
+opt.textwidth = 161
+opt.cursorline = true
 
 -- interval for writing swap file to disk, also used by gitsigns
 opt.updatetime = 250
