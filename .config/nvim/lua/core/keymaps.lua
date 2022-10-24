@@ -28,7 +28,7 @@ keymap("n", "<C-s>", ":w<CR>", opts)
 keymap("n", "q", ":q<CR>", opts)
 keymap("n", "Q", ":q!<CR>", opts)
 keymap("n", "<C-\\>", ":BufferLineGroupClose ungrouped<CR>", opts)
-keymap("n", "<C-q>", ":Bdelete<CR>", opts)
+keymap("n", "<C-x>", ":Bdelete<CR>", opts)
 
 -- Navigate buffers
 keymap("n", "<S-l>", ":BufferLineCycleNext<CR>", opts)
@@ -64,8 +64,6 @@ keymap("v", ">", ">gv", opts)
 -- Formatting
 keymap("n", "<A-f>", ":Prettier<CR>", opts)
 keymap("n", "<C-f>", "<cmd>NvimTreeToggle<CR>", opts)
-
--- ["e"] = { "<cmd>NvimTreeToggle<cr>", "Explorer" },
 
 -- Resize with arrows
 keymap("n", "_", ": vertical resize -2<CR>", opts)

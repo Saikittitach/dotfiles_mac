@@ -121,6 +121,7 @@ return packer.startup(function(use)
 	-- Treesitter
 	use({
 		"nvim-treesitter/nvim-treesitter",
+    commit = "6d486212ed8028ada5401e4ceea66dbf58296665",
 		run = ":TSUpdate",
 		event = { "BufRead", "BufNewFile" },
 		-- cmd = {
@@ -180,7 +181,11 @@ return packer.startup(function(use)
 
 	use({ "hrsh7th/cmp-nvim-lua", after = "cmp_luasnip" })
 
-	use({ "hrsh7th/cmp-nvim-lsp", after = "cmp-nvim-lua" })
+	use({
+    "hrsh7th/cmp-nvim-lsp",
+    commit = "affe808a5c56b71630f17aa7c38e15c59fd648a8",
+    after = "cmp-nvim-lua" 
+  })
 
 	use({ "hrsh7th/cmp-buffer", after = "cmp-nvim-lsp" })
 

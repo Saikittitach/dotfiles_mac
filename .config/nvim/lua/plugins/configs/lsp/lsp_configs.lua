@@ -62,7 +62,8 @@ M.capabilities = cmp_nvim_lsp.update_capabilities(capabilities)
 
  -- List Servers
 local servers = {
-  -- "angularls",
+  "angularls",
+  "gopls",
   "cssls",
   "html",
   "jdtls",
