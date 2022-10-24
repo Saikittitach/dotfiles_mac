@@ -5,3 +5,10 @@
 # Please adapt and uncomment the following lines:
 #	name = Kittitach
 #	email = saikittitach@hotmail.com
+[core]
+	autocrlf = input
+[pull]
+	rebase = true
+[rebase]
+	autostash = true
+
