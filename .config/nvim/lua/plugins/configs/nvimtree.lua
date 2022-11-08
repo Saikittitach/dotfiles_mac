@@ -47,7 +47,7 @@ local configs = {
 	},
 	git = {
 		enable = true,
-		ignore = false,
+		ignore = true,
 	},
 	filesystem_watchers = {
 		enable = true,
