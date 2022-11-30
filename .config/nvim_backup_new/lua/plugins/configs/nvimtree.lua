@@ -3,9 +3,6 @@ local status_ok, nvimtree = pcall(require, "nvim-tree")
 if not status_ok then
 	return
 end
-
-require("base46").load_highlight "nvimtree"
-
 local configs = {
 	filters = {
 		dotfiles = false,
@@ -24,7 +21,7 @@ local configs = {
 		update_root = true,
 	},
 	view = {
-		adaptive_size = true,
+		adaptive_size = false,
 		side = "left",
 		width = 25,
 		hide_root_folder = true,
@@ -109,6 +106,6 @@ local configs = {
 	},
 }
 
-vim.g.nvimtree_side = configs.view.side
+-- vim.g.nvimtree_side = configs.view.side
 
 nvimtree.setup(configs)
