@@ -72,6 +72,8 @@ local servers = {
   "marksman",
   "jsonls",
   "bashls",
+  "groovyls",
+  -- "eslint"
 }
 -- Config Vim globals waring!
 lspconfig.sumneko_lua.setup {
