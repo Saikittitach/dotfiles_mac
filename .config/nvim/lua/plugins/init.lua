@@ -235,6 +235,10 @@ return packer.startup(function(use)
     "maxmellon/vim-jsx-pretty"
 	})
 
+  use({
+    "styled-components/vim-styled-components"
+  })
+
 	-- Automatically set up your configuration after cloning packer.nvim
 	-- Put this at the end after all plugins
 	if PACKER_BOOTSTRAP then
