@@ -3,7 +3,7 @@
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
 
 # Path to your oh-my-zsh installation.
-export ZSH="/Users/kittitach/.oh-my-zsh"
+export ZSH="/Users/kittitachwatt/.oh-my-zsh"
 export PATH=/opt/homebrew/bin:$PATH
 export KITTY_CONFIG_DIRECTORY="/Users/{$USER}/.dotfiles/kitty"
 
@@ -129,7 +129,6 @@ export EDITOR='nvim'
 # Alias
 alias v="nvim ."
 alias vi="nvim ."
-alias vim="nvim ."
 alias c="clear"
 #alias tmux='tmux -2'
 
@@ -166,8 +165,9 @@ alias buddy-api='cd secrets/buddy/buddy-customer-api'
 alias buddy-web='cd secrets/buddy/buddy-seller-web'
 alias loop='cd secrets/loop/loop-mobile'
 alias dbot='cd secrets/dbot'
-alias rtv='cd secrets/dbot/lvt'
-alias rtv-ui='cd secrets/dbot/lvt/lvt-ui'
+alias rtv='cd secrets/dbot/tms-lvt'
+alias rtv-ui='cd secrets/dbot/tms-lvt/lvt-ui'
+alias driverPortal='cd secrets/dbot/tms-driver-portal'
 alias ssh-dev="sudo ssh -F $HOME/.ssh/config -i $HOME/.ssh/id_rsa develop"
 alias ssh-sp="sudo ssh -F $HOME/.ssh/config -i $HOME/.ssh/id_rsa sprint"
 alias ssh-db="sudo ssh -F $HOME/.ssh/config -i $HOME/.ssh/id_rsa db"
@@ -199,10 +199,22 @@ export ANDROID_SDK_ROOT=$HOME/Library/Android/sdk
 export PATH=$PATH:$ANDROID_SDK_ROOT/emulator
 export PATH=$PATH:$ANDROID_SDK_ROOT/platform-tools
 
+# export ANDROID_HOME=$HOME/Library/Android/sdk
+# export PATH=$PATH:$ANDROID_HOME/emulator
+# export PATH=$PATH:$ANDROID_HOME/platform-tools
+
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 
 # flyway config
-export PATH="$PATH:/Users/kittitach/Downloads/flyway-9.8.1"
+export PATH="$PATH:/Users/$USER/Downloads/flyway-9.8.1"
 
 export LC_ALL=en_US.UTF-8
+
+
+# Load Angular CLI autocompletion.
+source <(ng completion script)
+
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
