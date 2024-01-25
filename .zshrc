@@ -6,6 +6,22 @@
 export ZSH="/Users/kittitachwatt/.oh-my-zsh"
 export PATH=/opt/homebrew/bin:$PATH
 export KITTY_CONFIG_DIRECTORY="/Users/{$USER}/.dotfiles/kitty"
+export HOMEBREW_NO_AUTO_UPDATE=1
+
+# Loop mobild android java version
+# export JAVA_HOME=/Users/kittitachwatt/Library/Java/JavaVirtualMachines/temurin-11.0.20.1/Contents/Home
+
+export JAVA_HOME=/Library/Java/JavaVirtualMachines/jdk-11.0.13.jdk/Contents/Home
+
+# export JAVA_HOME=/Library/Java/JavaVirtualMachines/jdk-11.jdk/Contents/Home
+# export JAVA_HOME=/Library/Java/JavaVirtualMachines/jdk1.8.0_211.jdk/Contents/Home
+# export JAVA_HOME=/Library/Java/JavaVirtualMachines/azul-11.0.2/Contents/Home
+# export JAVA_HOME=/Users/kittitachwatt/Library/Java/JavaVirtualMachines/liberica-11.0.19-1/Contents/Home
+# export JAVA_HOME=/Users/kittitachwatt/Library/Java/JavaVirtualMachines/semeru-11.0.21/Contents/Home
+# export JAVA_HOME=/Users/kittitachwatt/Library/Java/JavaVirtualMachines/temurin-11.0.21/Contents/Home
+
+# TWA/TWCOST java version
+# export JAVA_HOME="/Users/kittitachwatt/Library/Java/JavaVirtualMachines/corretto-1.8.0_392/Contents/Home"
 
 ##############################################################
 # => ZSH Startup with Tmux
@@ -163,16 +179,22 @@ alias pretest='cd Desktop/pretest'
 alias buddy-app='cd secrets/buddy/buddy-customer-app'
 alias buddy-api='cd secrets/buddy/buddy-customer-api'
 alias buddy-web='cd secrets/buddy/buddy-seller-web'
-alias loop='cd secrets/loop/loop-mobile'
+alias loop='cd secrets/external/loop/loop-mobile'
+alias biddee='cd secrets/external/biddee-web'
 alias dbot='cd secrets/dbot'
 alias rtv='cd secrets/dbot/tms-lvt'
 alias rtv-ui='cd secrets/dbot/tms-lvt/lvt-ui'
+alias twa='cd secrets/dbot/tms-twa'
+alias admin='cd secrets/dbot/core-admin'
 alias driverPortal='cd secrets/dbot/tms-driver-portal'
-alias ssh-dev="sudo ssh -F $HOME/.ssh/config -i $HOME/.ssh/id_rsa develop"
-alias ssh-sp="sudo ssh -F $HOME/.ssh/config -i $HOME/.ssh/id_rsa sprint"
-alias ssh-db="sudo ssh -F $HOME/.ssh/config -i $HOME/.ssh/id_rsa db"
-alias ssh-oci-sp="sudo ssh -F $HOME/.ssh/config -i $HOME/.ssh/id_rsa oci-sprint"
-alias ssh-oci-qa="sudo ssh -F $HOME/.ssh/config -i $HOME/.ssh/id_rsa oci-qa"
+
+# Old config
+# alias ssh-dev="sudo ssh -F $HOME/.ssh/config -i $HOME/.ssh/id_rsa develop"
+# alias ssh-sp="sudo ssh -F $HOME/.ssh/config -i $HOME/.ssh/id_rsa sprint"
+# alias ssh-db="sudo ssh -F $HOME/.ssh/config -i $HOME/.ssh/id_rsa db"
+# alias ssh-oci-sp="sudo ssh -F $HOME/.ssh/config -i $HOME/.ssh/id_rsa oci-sprint"
+# alias ssh-oci-qa="sudo ssh -F $HOME/.ssh/config -i $HOME/.ssh/id_rsa oci-qa"
+# alias ssh-twa="sudo ssh -F $HOME/.ssh/config -i $HOME/.ssh/id_rsa twa"
 
 # FZF config
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
@@ -218,3 +240,6 @@ source <(ng completion script)
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+
+# Add RVM to PATH for scripting. Make sure this is the last PATH variable change.
+# export PATH="$PATH:$HOME/.rvm/bin"
